@@ -20,8 +20,12 @@ pipeline {
             steps {
                 sh '''
                 ssh -i "~/.ssh/id_rsa" jenkins@10.200.0.3 << EOF
-                docker rm --force node-app
-                docker run -d -p 4000:8080 --name node-app stratcastor/node-app:latest
+                rm -rf LBG-API-Extension
+                git clone https://github.com/PCMBarber/LBG-API-Extension.git
+                cd LBG-API-Extension
+                docker-compose down
+                docker-compose up -d
+                EOF
                 '''
             }
         }
