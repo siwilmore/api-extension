@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  java-app:
+    build: .
+    image: stratcastor/node-app:latest
+    ports:
+    - target: 4000
+      published: 4000
+      protocol: tcp
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
