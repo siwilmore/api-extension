@@ -20,8 +20,8 @@ pipeline {
             steps {
                 sh '''
                 ssh -i "~/.ssh/id_rsa" jenkins@10.200.0.3 << EOF
-                    docker rm --force node-app
-                    docker run -d -p 8080:4000 --name node-app stratcastor/node-app:latest
+                docker rm --force node-app
+                docker run -d -p 4000:8080 --name node-app stratcastor/node-app:latest
                 '''
             }
         }
