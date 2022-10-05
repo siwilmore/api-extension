@@ -5,6 +5,7 @@ services:
     image: stratcastor/node-app:latest
     ports:
     - target: 4000
+    published: 4000
       protocol: tcp
   nginx:
     image: nginx:latest
