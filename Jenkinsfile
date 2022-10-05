@@ -25,7 +25,6 @@ pipeline {
                 cd LBG-API-Extension
                 docker-compose down
                 docker-compose up -d
-                EOF
                 '''
             }
         }
