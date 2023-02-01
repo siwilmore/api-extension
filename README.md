@@ -19,6 +19,12 @@ $ npm start
 API Listening on http://localhost:8080
 ~~~
 
+You can access the application by navigating to: 
+
+~~~ bash
+http://localhost:8080/index.html
+~~~
+
 ## Stopping the application
 
 In order to stop the application from the git bash terminal that is running the server press ``CTRL`` + ``C``

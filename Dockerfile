@@ -1,7 +1,6 @@
 FROM node:14
-WORKDIR /app
-COPY . .
-RUN npm i
-ENV PORT=4000
-EXPOSE 4000
+
+# Base image and entrypoint provided
+# Research npm to discover how to install app and dependencies
+
 ENTRYPOINT ["npm", "start"]
