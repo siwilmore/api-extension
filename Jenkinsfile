@@ -20,7 +20,7 @@ pipeline {
         stage('Run') {
             steps {
                 sh '''
-                ssh -i "~/.ssh/id_rsa" jenkins@34.133.117.182 << EOF
+                ssh -i "~/.ssh/id_rsa" jenkins@34.136.72.133 << EOF
                 docker stop apitask
                 docker rm apitask
                 docker rmi apitask
