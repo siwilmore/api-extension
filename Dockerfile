@@ -5,6 +5,6 @@ COPY . .
 WORKDIR /app
 RUN npm install
 # Expose the correct port
-EXPOSE 80
+EXPOSE 4000
 # Create an entrypoint
 ENTRYPOINT ["npm", "start"]
